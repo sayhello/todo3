@@ -1,0 +1,12 @@
+<p>
+  list works!
+</p>
+
+<input type="text" #newitem />
+  <button (click)="addItem(newitem.value)">Add</button>
+  
+<ul>
+  <li class="text" *ngFor="let item of items | async">
+    {{item.first_name}} + {{item.text}}
+  </li>
+</ul>
