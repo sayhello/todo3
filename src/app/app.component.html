@@ -1,16 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<div>
+  <h1>
+    {{title}}
+  </h1>
+  <p><button kendoButton (click)="onButtonClick()" [primary]="true">My Kendo UI Button</button></p>
+</div>
 
-<button kendoButton (click)="onButtonClick()" [primary]="true">My Kendo UI Button</button>
-
-<ul>
-  <li>
-    <a routerLink="home">home</a>
-  </li>
-  <li>
-    <a routerLink="list">list</a>
-  </li>
-</ul>
-
+<div class="row">
+  <div class="col-md-12">
+    <a routerLink="home">home</a> | <a routerLink="list">list</a> | <a routerLink="add">add</a>
+  </div>
+</div>
+ 
+<hr>
 <router-outlet></router-outlet>

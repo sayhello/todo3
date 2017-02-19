@@ -17,9 +17,7 @@ export class ListComponent implements OnInit {
     }).map((array) => array.reverse()) as FirebaseListObservable<any[]>;
   }
 
-  addItem(newName: string) {
-    this.items.push({ text: newName });
-  }
+  
 
   ngOnInit() {
   }

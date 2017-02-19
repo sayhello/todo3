@@ -13,9 +13,11 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { ListComponent } from './list/list.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AddComponent } from './add/add.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'add', component: AddComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'list', component: ListComponent },
   { path: '**', component: PageNotFoundComponent }
@@ -36,7 +38,8 @@ export const firebaseConfig = {
     AppComponent,
     ListComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,
