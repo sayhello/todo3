@@ -1,8 +1,16 @@
 <div>
-  <p>list works!</p>
+  <p>list works! {{currentTime | date: 'dd/MM/yyyy HH:mm'}}</p>
   <ul>
     <li class="text" *ngFor="let item of items | async">
-      {{item.first_name}} + {{item.text}}
+      <pre>{{item | json}}</pre>
+      <p>
+        <!--Duration: {{item.duration | date: 'dd/MM/yyyy HH:mm'}}<br>
+        DIFF: {{item.created | amDifference: item.duration :'minutes' : true}} minutes <br>
+        Es verbleiben noch: {{item.duration | amTimeAgo}}<br>
+        Created: {{item.created | date: 'dd/MM/yyyy HH:mm'}}<br>-->
+        Es verbleiben noch: {{item.duration | amTimeAgo}}<br>
+      </p>
+      <h4>Text: {{item.text}}</h4>
     </li>
   </ul>
 </div>

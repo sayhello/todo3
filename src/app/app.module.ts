@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { AngularFireModule } from 'angularfire2';
+import {MomentModule} from 'angular2-moment';
+import 'moment/locale/de';
 
 import { AppComponent } from './app.component';
 
@@ -47,7 +49,8 @@ export const firebaseConfig = {
     HttpModule,
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(firebaseConfig),
-    ButtonsModule
+    ButtonsModule,
+    MomentModule
   ],
   providers: [],
   bootstrap: [AppComponent]

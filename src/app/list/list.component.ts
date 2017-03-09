@@ -8,6 +8,7 @@ import 'rxjs/Rx';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
+  currentTime = new Date().getTime();
   items: FirebaseListObservable<any[]>;
   constructor(af: AngularFire) {
     this.items = af.database.list('', {
